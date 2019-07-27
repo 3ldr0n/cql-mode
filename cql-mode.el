@@ -34,7 +34,7 @@
     "compact" "consistency" "count" "create" "custom" "delete" "desc"
     "describe" "distinct" "drop" "each_quorum" "entries" "exists"
     "filtering" "from" "full" "grant" "if" "in" "index" "inet"
-    "insert" "into" "key" "keyspace" "keyspaces" "limit" "local_one"
+    "insert" "into" "json" "key" "keyspace" "keyspaces" "limit" "local_one"
     "local_quorum" "materialized" "modify" "norecursive" "nosuperuser"
     "not" "of" "on" "one" "order" "partition" "password" "per" "permission"
     "permissions" "primary" "quorum" "rename" "revoke" "schema"
