@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS users (
         first_name text,
         last_name text,
         phone_numbers list<text>,
+        age tinyint,
+        account_creation_date timestamp,
         PRIMARY KEY((transaction_id))
 );
 
@@ -36,9 +38,15 @@ CREATE TABLE IF NOT EXISTS user (
 
 DROP TYPE phone;
 
-CREATE TABLE durations (
+CREATE TYPE event_classification (
+    classification_name text,
+    classification_type tinyint,
+);
+
+CREATE TABLE events (
     event text,
-    duration tuple<int, text>,
+    event_duration tuple<int, text>,
+    classification frozen<event_classification>,
 )
 
-INSERT INTO durations (event, duration) VALUES ('ev1', (3, 'hours'));
+INSERT INTO events (event, event_duration) VALUES ('ev1', (3, 'hours'));

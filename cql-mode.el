@@ -29,35 +29,38 @@
   (list
    (sql-font-lock-keywords-builder
     'font-lock-keyword-face nil
-    "add" "allow" "alter" "and" "any" "apply" "asc" "authorize" "batch"
-    "begin" "by" "columnfamily" "create" "delete" "desc" "drop"
-    "each_quorum" "from" "grant" "in" "index" "inet" "insert" "into"
-    "keyspace" "keyspaces" "limit" "local_one" "local_quorum" "modify"
-    "of" "on" "one" "order" "password" "primary" "quorum" "rename"
-    "revoke" "schema" "select" "set" "table" "to" "token" "three"
-    "truncate" "two" "type" "unlogged" "update" "use" "using" "where" "with"
-    "if" "not" "exists"
+    "add" "aggregate" "all" "allow" "alter" "and" "any" "apply" "as"
+    "asc" "authorize" "batch" "begin" "by" "clustering" "columnfamily"
+    "compact" "consistency" "count" "create" "custom" "delete" "desc"
+    "describe" "distinct" "drop" "each_quorum" "entries" "exists"
+    "filtering" "from" "full" "grant" "if" "in" "index" "inet"
+    "insert" "into" "key" "keyspace" "keyspaces" "limit" "local_one"
+    "local_quorum" "materialized" "modify" "norecursive" "nosuperuser"
+    "not" "of" "on" "one" "order" "partition" "password" "per" "permission"
+    "permissions" "primary" "quorum" "rename" "revoke" "schema"
+    "select" "set" "static" "storage" "superuser" "table" "three"
+    "to" "token" "truncate" "ttl" "two" "type" "unlogged" "update"
+    "use" "user" "users" "using" "values" "view" "where" "with" "writetime"
     )
    sql-mode-font-lock-object-name
    ;; cql data types
    (sql-font-lock-keywords-builder
     'font-lock-type-face nil
-    "ascii" "bigint" "blob" "boolean" "counter" "date" "decimal" "double"
-    "duration" "float" "inet" "int" "smallint" "time" "timestamp"
-    "list" "map" "set" "text" "tinyint" "uuid" "timeuuid" "varchar" "varint"
+    "ascii" "bigint" "blob" "boolean" "counter" "date" "decimal"
+    "double" "duration" "float" "frozen" "inet" "int" "list"
+    "map" "set" "smallint" "text" "tinyint" "time" "timestamp"
+    "timeuuid" "tuple" "uuid" "varchar" "varint"
     )))
 
 ;;;###autoload
 (define-derived-mode cql-mode prog-mode "CQL"
   "cql major mode"
-
   (set-syntax-table (copy-syntax-table sql-mode-syntax-table))
 
   (kill-local-variable 'font-lock-set-defaults)
   (setq font-lock-defaults
         (list '(cql-mode-font-lock-keywords) nil t
               (sql-product-font-lock-syntax-alist)))
-
   )
 
 ;;;###autoload
