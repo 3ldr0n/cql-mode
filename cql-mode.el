@@ -36,14 +36,16 @@
     "of" "on" "one" "order" "password" "primary" "quorum" "rename"
     "revoke" "schema" "select" "set" "table" "to" "token" "three"
     "truncate" "two" "type" "unlogged" "update" "use" "using" "where" "with"
+    "if" "not" "exists"
     )
    sql-mode-font-lock-object-name
    ;; cql data types
    (sql-font-lock-keywords-builder
     'font-lock-type-face nil
-    "ascii" "bigint" "blob" "boolean" "counter" "decimal" "double"
-    "float" "inet" "int" "list" "map" "set" "text" "timestamp"
-    "uuid" "timeuuid" "varchar" "varint")))
+    "ascii" "bigint" "blob" "boolean" "counter" "date" "decimal" "double"
+    "duration" "float" "inet" "int" "smallint" "time" "timestamp"
+    "list" "map" "set" "text" "tinyint" "uuid" "timeuuid" "varchar" "varint"
+    )))
 
 ;;;###autoload
 (define-derived-mode cql-mode prog-mode "CQL"
