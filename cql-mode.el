@@ -48,7 +48,7 @@
     'font-lock-type-face nil
     "ascii" "bigint" "blob" "boolean" "counter" "date" "decimal"
     "double" "duration" "float" "frozen" "inet" "int" "list"
-    "map" "set" "smallint" "text" "tinyint" "time" "timestamp"
+    "map" "null" "set" "smallint" "text" "tinyint" "time" "timestamp"
     "timeuuid" "tuple" "uuid" "varchar" "varint"
     )))
 
